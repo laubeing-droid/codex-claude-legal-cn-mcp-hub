@@ -2,7 +2,7 @@
 
 > 中国法律检索 MCP 连接器管理中心 — 一套配置，全端生效
 
-Codex Desktop / Claude Code / Claude Desktop 三端通用的中国法律 MCP 连接器配置工具。自动检测本机客户端，写入对应格式配置（TOML / JSON），一次安装多环境覆盖。
+Codex Desktop / Claude Code / Claude Desktop 三端通用的中国法律 MCP 连接器中心。集配置管理、自托管 MCP Server、文档与 CI/CD 于一体。
 
 ## 连接器一览
 
