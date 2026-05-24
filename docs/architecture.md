@@ -62,6 +62,7 @@
 
 ## 自建 MCP Server 架构
 
+两个 Server 均为基于公开 API 文档的干净室实现：
 
 ```
 servers/

@@ -202,7 +202,7 @@ enabled = true
 
 ## 四、自建 MCP Server
 
-本仓库内置两个 Python 实现的 MCP 服务器，部署后可作为标准 MCP 连接器使用。
+本仓库内置两个 Python 实现的 MCP 服务器（干净室实现），部署后可作为标准 MCP 连接器使用。
 
 ### 4.1 国家法规库（flk-npc）
 
@@ -212,6 +212,7 @@ enabled = true
 | 数据源 | 国家法律法规数据库（flk.npc.gov.cn） |
 | 鉴权 | **免费，无需鉴权** |
 | 端口 | `localhost:18062` |
+| 实现 | 单文件 `scripts/server.py` |
 
 **启动：**
 ```bash
@@ -236,6 +237,7 @@ enabled = true
 | 数据源 | 人民法院案例库（rmfyalk.court.gov.cn） |
 | 鉴权 | Cookie Token（需从浏览器获取） |
 | 端口 | `localhost:18061` |
+| 实现 | 单文件 `scripts/server.py` |
 
 **启动：**
 ```bash

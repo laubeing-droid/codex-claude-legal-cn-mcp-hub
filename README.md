@@ -13,6 +13,8 @@ Codex Desktop / Claude Code / Claude Desktop 三端通用的中国法律 MCP 连
 | **元典智库 （chineselaw）** | REST API 直调 | 36 接口 | API Key （X-API-Key） | 深度集成 |
 | **北大法宝 （pkulaw）** | HTTP MCP | 10+ 服务 | Access Token | ⭐ 推荐 |
 | **飞书 （LarkSuite）** | npm stdio | 文档/消息/日历 | App ID + Secret | 推荐 |
+| **国家法规库 （flk-npc）** | Python 自托管（干净室实现） | 法规检索 | 免费无鉴权 | 可选 |
+| **案例库 （rmfyalk）** | Python 自托管（干净室实现） | 案例检索 | Cookie Token | 可选 |
 
 可配合 [Claude-for-Legal-CN-to-Codex](https://github.com/laubeing-droid/Claude-for-Legal-CN-to-Codex) 获取完整法律技能工作流，亦可单独安装给任意 MCP 客户端使用。
 
