@@ -1,6 +1,6 @@
 ﻿# Codex-Claude-legal-cn-mcp-hub
 
-> 中国法律检索 MCP 连接器管理中心 — 一套配置，全端生效
+> 中国法律 MCP 连接器中心 — 自托管 Server + 配置管理，全端生效
 
 Codex Desktop / Claude Code / Claude Desktop 三端通用的中国法律 MCP 连接器中心。集配置管理、自托管 MCP Server、文档与 CI/CD 于一体。
 
