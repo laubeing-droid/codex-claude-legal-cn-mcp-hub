@@ -134,12 +134,12 @@ function Get-YuandianHttpJson {
     }
 }
 
-# 方式 B: stdio（社区 npm 包 chineselaw-mcp，备选）
+
 function Get-YuandianStdConfig {
     param([string]$ApiKey)
     return @{
         command = 'npx'
-        args    = @('-y', 'chineselaw-mcp')
+        
         env     = @{ CHINESELAW_API_KEY = $ApiKey }
     }
 }

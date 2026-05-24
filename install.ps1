@@ -6,7 +6,7 @@
   写入每个环境的配置文件中（TOML 或 JSON 格式自动适配）。
   支持交互式输入凭证、选择服务、检测前置依赖。
   支持的连接器：
-    - 元典智库（Streamable HTTP 官方 / npm stdio 备选）
+    - 元典智库（Streamable HTTP MCP）
     - 飞书（LarkSuite 官方 MCP）
     - 北大法宝（HTTP 服务 + npm CLI 调试工具）
 #>
@@ -50,7 +50,7 @@ Write-Host ''
 Write-Host '[2/8] 前置检查...' -ForegroundColor Yellow
 $nodeOk = $true
 if (-not (Test-Command 'node')) {
-    Write-Host '  [!!] Node.js 未安装！chineselaw / 飞书 / pkulaw 需要 Node.js >= 18' -ForegroundColor Red
+    Write-Host '  [!!] Node.js 未安装！飞书 / pkulaw 需要 Node.js >= 18' -ForegroundColor Red
     Write-Host '       下载: https://nodejs.org (LTS 版本)' -ForegroundColor Cyan
     $nodeOk = $false
 } else {
@@ -67,7 +67,6 @@ Write-Host '   官方文档: https://open.chineselaw.com/llms-full.txt' -Foregro
 Write-Host ''
 Write-Host '  接入方式:' -ForegroundColor Yellow
 Write-Host '    [1] Streamable HTTP MCP（官方推荐，3 个细分 Server）' -ForegroundColor Cyan
-Write-Host '    [2] npm stdio（社区包 chineselaw-mcp，单 Server 全工具）' -ForegroundColor Cyan
 Write-Host '    [3] 跳过' -ForegroundColor DarkGray
 $mode = Read-Host '  请选择 (默认 1)'
 if ([string]::IsNullOrWhiteSpace($mode)) { $mode = '1' }
@@ -101,30 +100,7 @@ if ($installYuandian) {
         [Environment]::SetEnvironmentVariable('YUANDIAN_API_KEY', $yuandianApiKey, 'User')
         Write-Host '  [完成] 环境变量 YUANDIAN_API_KEY 已保存（用于 REST API 直调）' -ForegroundColor DarkGray
 
-    } elseif ($mode -eq '2') {
-        # ── 方式 B: npm stdio ──
-        Write-Host '  安装元典 npm stdio（chineselaw-mcp）...' -ForegroundColor DarkGray
-        foreach ($e in $activeEnvs) {
-            if ($e.Format -eq 'toml') {
-                $tomlBlock = @"
-[mcp_servers.chineselaw]
-command = "npx"
-args = ["-y", "chineselaw-mcp"]
-startup_timeout_sec = 30
-tool_timeout_sec = 600
-enabled = true
-
-[mcp_servers.chineselaw.env]
-CHINESELAW_API_KEY = "$yuandianApiKey"
-"@
-                $added = Write-McpToCodex -ConfigPath $e.ConfigPath -Section 'chineselaw' -TomlBlock $tomlBlock
-            } else {
-                $svcConfig = Get-YuandianStdConfig -ApiKey $yuandianApiKey
-                $added = Write-McpToClaude -ConfigPath $e.ConfigPath -ServerId 'chineselaw' -ServerConfig $svcConfig
-            }
-            Write-Host "  $($(if ($added) { '[添加]' } else { '[跳过]' })) $($e.Display) -> chineselaw" -ForegroundColor $(if ($added) { 'Green' } else { 'DarkYellow' })
         }
-    }
 } else {
     Write-Host '  跳过元典智库' -ForegroundColor DarkGray
 }

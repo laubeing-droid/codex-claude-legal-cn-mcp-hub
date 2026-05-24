@@ -77,7 +77,6 @@ for e in envs:
         toml_block = f'''
 [mcp_servers.chineselaw]
 command = \"npx\"
-args = [\"-y\", \"chineselaw-mcp\"]
 startup_timeout_sec = 30
 tool_timeout_sec = 600
 enabled = true
@@ -97,7 +96,7 @@ CHINESELAW_API_KEY = \"{api_key}\"
     else:
         server_config = {
             'command': 'npx',
-            'args': ['-y', 'chineselaw-mcp'],
+            
             'env': {'CHINESELAW_API_KEY': api_key}
         }
         result = subprocess.run(['python3', '-c', f'''

@@ -124,7 +124,7 @@ function Check-NpmVersion {
         else { Write-Host "  [!!] $DisplayName local=$local → latest=$latest" -ForegroundColor Yellow }
     } catch { Write-Host "  [!]  $DisplayName (无法检查)" -ForegroundColor DarkGray }
 }
-Check-NpmVersion 'chineselaw-mcp' 'chineselaw-mcp'
+
 Check-NpmVersion '@pkulaw/mcp-cli' '@pkulaw/mcp-cli'
 
 Write-Host ''

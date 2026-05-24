@@ -37,6 +37,5 @@
 ## v1.0.0 （2026-05-22）
 
 ### 初始版本
-- 元典智库 chineselaw-mcp 安装
 - Codex Desktop / Claude Code 双端配置
 - 基础 install.ps1

@@ -57,7 +57,7 @@ function Check-NpmVersion {
         else { Write-Host "  [!!] $DisplayName local=$local → latest=$latest (有新版本)" -ForegroundColor Yellow }
     } catch { Write-Host "  [!]  $DisplayName (无法检查)" -ForegroundColor DarkGray }
 }
-Check-NpmVersion 'chineselaw-mcp' 'chineselaw-mcp'
+
 Check-NpmVersion '@pkulaw/mcp-cli' '@pkulaw/mcp-cli'
 
 # ─── [3/5] 全环境 MCP 配置检查 ───────────────────────

@@ -80,5 +80,4 @@ chmod +x install.sh && ./install.sh
 ## 许可证
 
 MIT。上游依赖：
-- [chineselaw-mcp](https://www.npmjs.com/package/chineselaw-mcp)（MIT，zooges）
 - [@pkulaw/mcp-cli](https://www.npmjs.com/package/@pkulaw/mcp-cli)（MIT，北大法宝官方）

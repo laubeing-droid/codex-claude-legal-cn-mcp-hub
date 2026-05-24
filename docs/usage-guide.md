@@ -61,7 +61,6 @@ chmod +x install.sh && ./install.sh
   [!]  Token 仍为占位符
 
 npm 包版本:
-  [OK] chineselaw-mcp v2.1.0
   [!]  @pkulaw/mcp-cli（未安装）
 ```
 
@@ -73,7 +72,6 @@ npm 包版本:
 
 自动完成：
 1. `git pull` 拉取本仓库最新版本
-2. 检查 `chineselaw-mcp` / `@pkulaw/mcp-cli` 本地 vs 最新版本
 3. 遍历所有客户端环境检查 MCP 段状态
 4. 检测 Token / API Key 是否仍为占位符
 5. 如安装了 `@pkulaw/mcp-cli`，自动调用验证 Token 有效性

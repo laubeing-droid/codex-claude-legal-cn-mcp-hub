@@ -44,7 +44,6 @@ jobs:
             fi
           }
 
-          check_npm "chineselaw-mcp（元典智库 MCP）" "chineselaw-mcp"
           check_npm "@pkulaw/mcp-cli（北大法宝 CLI）" "@pkulaw/mcp-cli"
 
           echo "report=$REPORT" >> $GITHUB_OUTPUT
@@ -83,7 +82,7 @@ jobs:
         run: |
           CACHE_FILE=".npm-last-check"
           > "$CACHE_FILE"
-          for pkg in chineselaw-mcp @pkulaw/mcp-cli; do
+          for pkg in "@pkulaw/mcp-cli"; do
             ver=$(curl -s "https://registry.npmjs.org/$pkg/latest" | jq -r '.version // ""')
             if [ -n "$ver" ]; then
               echo "$pkg=$ver" >> "$CACHE_FILE"

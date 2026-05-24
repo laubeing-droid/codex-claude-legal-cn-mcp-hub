@@ -50,7 +50,6 @@
   ├── 不依赖任何上游仓库（可独立使用）
   ├── 被 Claude-for-Legal-CN-to-Codex 委托调用（install/update）
   │
-  ├── 元典智库（chineselaw-mcp）    → npm 包，Node.js >= 18
   ├── 北大法宝（@pkulaw/mcp-cli）   → npm 包，调试/诊断工具
   ├── 飞书（@larksuiteoapi/lark-mcp）→ npm 包
   ├── 国家法规库（servers/flk-npc/）→ Python 自托管，免费无鉴权

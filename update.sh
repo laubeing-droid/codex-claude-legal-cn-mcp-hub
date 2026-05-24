@@ -22,7 +22,7 @@ fi
 # [2/5] npm 包版本检查
 echo ""
 echo "[2/5] 检查 npm 包版本..."
-for pkg in "chineselaw-mcp" "@pkulaw/mcp-cli"; do
+for pkg in "@pkulaw/mcp-cli"; do
     latest=$(curl -s "https://registry.npmjs.org/${pkg}/latest" 2>/dev/null | python3 -c "import sys,json; print(json.load(sys.stdin).get('version','unknown'))" 2>/dev/null || echo "unknown")
     local_ver=$(npx "${pkg}" --version 2>/dev/null || echo "未安装")
     if [ "$local_ver" = "未安装" ]; then

@@ -82,12 +82,10 @@ enabled = true
 
 ### 方式 B：npm stdio（备选）
 
-当 HTTP MCP 不可用时，使用 npm 包 `chineselaw-mcp`。
 
 ```toml
 [mcp_servers.chineselaw]
 command = "npx"
-args = ["chineselaw-mcp"]
 env = { CHINESELAW_API_KEY = "YOUR_API_KEY" }
 enabled = true
 ```
@@ -97,7 +95,6 @@ enabled = true
   "mcpServers": {
     "chineselaw": {
       "command": "npx",
-      "args": ["chineselaw-mcp"],
       "env": { "CHINESELAW_API_KEY": "YOUR_API_KEY" }
     }
   }
