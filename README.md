@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 version: 3.0.2
 module: mcp-hub
 status: active
@@ -68,6 +68,15 @@ bash install.sh
 | **Claude Code** | `~/.claude/settings.json` | JSON |
 | **Claude Desktop**（Win） | `%APPDATA%/Claude/claude_desktop_config.json` | JSON |
 | **Claude Desktop**（Mac） | `~/Library/Application Support/Claude/claude_desktop_config.json` | JSON |
+
+## 配套项目
+
+> **法律数据库**: 本项目配合 [codex-claude-legal-cn-core-codices](https://github.com/laubeing-droid/codex-claude-legal-cn-core-codices) 使用（162部中国法律全文JSON）。
+> 
+> ```bash
+> git submodule add https://github.com/laubeing-droid/codex-claude-legal-cn-core-codices.git legal-cn-data
+> ```
+> 即可在本地离线检索全部法条，无需API。
 
 ## 配套项目
 
