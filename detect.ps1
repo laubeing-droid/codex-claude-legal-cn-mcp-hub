@@ -236,11 +236,7 @@ enabled = true
 "@
 }
 
-  # Export-ModuleMember -Function Get-EnvironmentInfo  # commented: script mode only, Write-McpToCodex, Write-McpToClaude,
-    Get-YuandianHttpConfig, Get-YuandianHttpToml, Get-YuandianHttpJson, Get-YuandianStdConfig,
-    Get-FeishuConfig, Get-FeishuToml,
-    Get-PkulawHttpConfig,
-    Get-SelfHostedRmfyalkConfig, Get-SelfHostedRmfyalkToml,
-    Get-SelfHostedFlkNpcConfig, Get-SelfHostedFlkNpcToml
+  # Export-ModuleMember block commented out — script mode only
+
 
 
