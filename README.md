@@ -58,6 +58,7 @@ cd Codex-Claude-legal-cn-mcp-hub
 | 仓库 | 说明 |
 |------|------|
 | [Claude-for-Legal-CN-to-Codex](https://github.com/laubeing-droid/Claude-for-Legal-CN-to-Codex) | 上游主仓库：中国法律技能 + MCP 集成 |
+| [Codex-Legal-CN-Judgment-Predictor](https://github.com/laubeing-droid/Codex-Legal-CN-Judgment-Predictor) | AI 裁判预测框架 |
 | [PRC-US-Legal-Semantic-Alignment-Framework](https://github.com/laubeing-droid/PRC-US-Legal-Semantic-Alignment-Framework) | 中美法律语义对齐框架 |
 
 ## 许可证
