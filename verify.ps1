@@ -46,7 +46,7 @@ foreach ($e in $activeEnvs) {
             $allOk = $false
         }
         foreach ($section in $sections) {
-            $sectionRegex = "(?ms)^\[mcp_servers\.\Q$section\E\]"
+            $sectionRegex = "(?ms)^\[mcp_servers\.$([regex]::Escape($section))\]"
             if ($config -match "${sectionRegex}.*?enabled\s*=\s*true") {
                 Write-Host "  [OK] $section (已启用)" -ForegroundColor Green
             } else {
@@ -55,7 +55,7 @@ foreach ($e in $activeEnvs) {
             }
             # 检查占位符
             $sectionContent = ""
-            if ($config -match "(?ms)\[mcp_servers\.\Q$section\E\](.*?)(?=\[mcp_servers\.|$)") {
+            if ($config -match "(?ms)\[mcp_servers\.$([regex]::Escape($section))\](.*?)(?=\[mcp_servers\.|$)") {
                 $sectionContent = $Matches[1]
             }
             if ($section -eq 'chineselaw') {
@@ -138,3 +138,4 @@ if (Test-Command 'pkulaw-mcp') {
 Write-Host ''
 if ($allOk) { Write-Host '✓ 验证通过。所有配置正常。' -ForegroundColor Green }
 else { Write-Host '⚠ 存在上述问题，请参考 docs/connectors.md 修复。' -ForegroundColor Yellow }
+
