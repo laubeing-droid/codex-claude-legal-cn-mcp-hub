@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 version: 3.0.2
 module: docs
 status: active
@@ -41,7 +41,7 @@ enabled = true
 | 注册 | → 控制台 → 获取 Access Token |
 | 文档 | https://mcp.pkulaw.com/docs |
 
-10 个 HTTP MCP 服务，共用 `https://apim-gateway.pkulaw.com` 基础 URL：
+多个 HTTP MCP 服务，共用 `https://apim-gateway.pkulaw.com` 基础 URL：
 
 | # | 段名 | 服务名 |
 |---|------|--------|
