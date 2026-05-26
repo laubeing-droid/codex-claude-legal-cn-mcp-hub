@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Codex-Claude-legal-cn-mcp-hub 安装脚本
+  legal-cn-mcp-hub 安装脚本
 .DESCRIPTION
   检测 MCP 客户端环境 → 自托管服务 → 元典智库 → 北大法宝 → 飞书。
   - 直接运行:     完整交互流程
@@ -36,7 +36,7 @@ if (Test-Path $envCheckScript) {
     Write-Host "  [!] env-check.ps1 未找到，跳过环境校验" -ForegroundColor DarkYellow
 }
 Write-Host ""
-Write-Host "=== Codex-Claude-legal-cn-mcp-hub 安装 ===" -ForegroundColor Green
+Write-Host "=== legal-cn-mcp-hub 安装 ===" -ForegroundColor Green
 if ($Quick) { Write-Host "  模式: Quick（仅自托管）" -ForegroundColor DarkYellow }
 Write-Host ""
 
@@ -79,7 +79,7 @@ if ($Quick) {
     Write-Host ""
     Write-Host "  MCP 在线服务未配置（元典/北大法宝/飞书）" -ForegroundColor Red
     Write-Host "  运行完整安装以启用在线服务:" -ForegroundColor Cyan
-    Write-Host "    cd codex-claude-legal-cn-mcp-hub" -ForegroundColor White
+    Write-Host "    cd legal-cn-mcp-hub" -ForegroundColor White
     Write-Host "    .\install.ps1" -ForegroundColor White
     Write-Host "========================================" -ForegroundColor DarkYellow
     return

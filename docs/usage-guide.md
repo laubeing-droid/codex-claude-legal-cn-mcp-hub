@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 version: 3.0.2
 module: docs
 status: active
@@ -9,15 +9,15 @@ status: active
 ## 安装
 
 ```powershell
-git clone https://github.com/laubeing-droid/Codex-Claude-legal-cn-mcp-hub.git
-cd Codex-Claude-legal-cn-mcp-hub
+git clone https://github.com/laubeing-droid/legal-cn-mcp-hub.git
+cd legal-cn-mcp-hub
 .\install.ps1
 ```
 
 macOS/Linux：
 ```bash
-git clone https://github.com/laubeing-droid/Codex-Claude-legal-cn-mcp-hub.git
-cd Codex-Claude-legal-cn-mcp-hub
+git clone https://github.com/laubeing-droid/legal-cn-mcp-hub.git
+cd legal-cn-mcp-hub
 chmod +x install.sh && ./install.sh
 ```
 
@@ -62,4 +62,4 @@ python scripts/server.py
 
 ## 配合主仓库
 
-本仓库独立可用。配合 [Claude-for-Legal-CN-to-Codex](https://github.com/laubeing-droid/Claude-for-Legal-CN-to-Codex) 时，其 install.ps1 会自动调用本仓库。
+本仓库独立可用。配合 [legal-cn-main](https://github.com/laubeing-droid/legal-cn-main) 时，其 install.ps1 会自动调用本仓库。

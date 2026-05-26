@@ -1,10 +1,10 @@
-﻿<!--
+<!--
 version: 1.0.0
 module: docs
 status: active
 -->
 
-# Codex-Claude-legal-cn-mcp-hub — 全局文件索引
+# legal-cn-mcp-hub — 全局文件索引
 
 > MCP Hub
 > 自动生成于 2026-05-25
